@@ -4,30 +4,22 @@ import java.util.Scanner;
 
 public class LoopSumFour {
     public static void main(String[] args) {
-        int input = getUserInput();
-        getInputSum(input);
+        String userInput = getUserInput();
+        char[] ch = userInput.toCharArray();
+        System.out.println(getInputSum(ch));
     }
 
-    private static void getInputSum(int input) {
-        int result = 0;
-        if (input == 0) {
-            System.out.println(result);
-        } else if (input > 0) {
-            for (int i = 0; i < input + 1; i++) {
-                result += i;
-            }
-            System.out.println(result);
-        } else {
-            for (int i = 0; i > input - 1; i--) {
-                result += i;
-            }
-            System.out.println(result);
+    private static int getInputSum(char[] ch) {
+        int sum = 0;
+        for (char c : ch) {
+            sum += Integer.parseInt(String.valueOf(c));
         }
+        return sum;
     }
 
-    private static int getUserInput() {
+    private static String getUserInput() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Pls enter any value: ");
-        return scanner.nextInt();
+        return scanner.nextLine();
     }
 }
