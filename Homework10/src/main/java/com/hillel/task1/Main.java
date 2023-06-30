@@ -17,16 +17,16 @@ public class Main {
     }
 
     public static void printWine(Wine wine) {
-        System.out.println("Name: " + wine.name + "\nPercentage of alcohol: " +
-                wine.percentageOfAlcohol + "\nIs it carbonated? " + wine.carbonated +
-                "\nType of wine: " + wine.typeOfWine + "\nColor of wine: " + wine.color +
-                "\nSort of wine: " + wine.sortOfGrape + "\nYear of production: " + wine.yearOfProduction);
+        System.out.println("Name: " + wine.getName() + "\nPercentage of alcohol: " +
+                wine.getPercentageOfAlcohol() + "\nIs it carbonated? " + wine.isCarbonated() +
+                "\nType of wine: " + wine.getTypeOfWine() + "\nColor of wine: " + wine.getColor() +
+                "\nSort of wine: " + wine.getSortOfGrape() + "\nYear of production: " + wine.getYearOfProduction());
     }
 
     public static void printBeer(Beer beer) {
-        System.out.println("Name:" + beer.name + "\nPercentage of alcohol: " + beer.percentageOfAlcohol +
-                "\nIs it carbonated? " + beer.carbonated + "\nType of beer: " + beer.type +
-                "\nColor of beer: " + beer.color);
+        System.out.println("Name:" + beer.getName() + "\nPercentage of alcohol: " + beer.getPercentageOfAlcohol() +
+                "\nIs it carbonated? " + beer.isCarbonated() + "\nType of beer: " + beer.getType() +
+                "\nColor of beer: " + beer.getColor());
     }
 
     public static void printLineSeparated() {
