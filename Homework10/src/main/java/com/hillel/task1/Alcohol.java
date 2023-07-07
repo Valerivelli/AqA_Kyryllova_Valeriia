@@ -11,8 +11,6 @@ public abstract class Alcohol {
         this.carbonated = carbonated;
     }
 
-    public abstract void printObject();
-
     public float getPercentageOfAlcohol() {
         return percentageOfAlcohol;
     }
