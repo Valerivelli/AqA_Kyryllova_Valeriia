@@ -26,4 +26,20 @@ public class Beer extends Alcohol {
         this.type = type;
         this.color = color;
     }
+
+    @Override
+    public void printObject() {
+        System.out.println(this.toString());
+    }
+
+    @Override
+    public String toString() {
+        return "Beer{" +
+                "Name: " + this.getName() + "\n" +
+                "Percentage of alcohol: " + this.getPercentageOfAlcohol() + "\n" +
+                "Is it carbonated? " + this.isCarbonated() + "\n" +
+                "type = " + type + "\n" +
+                "color = " + color + "\n" +
+                '}';
+    }
 }
