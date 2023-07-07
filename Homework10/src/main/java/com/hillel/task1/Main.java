@@ -7,26 +7,13 @@ public class Main {
         Beer paleAleCitra = new Beer(4.2f, "American Pale Ale Citra", true, "Ale", "white");
         Beer irishDryStout = new Beer(5.5f, "Uncle Beer Irish Dry Stout", true, "lager", "black");
 
-        printWine(sauvignonBlanc);
+        sauvignonBlanc.printObject();
         printLineSeparated();
-        printWine(cabernet);
+        cabernet.printObject();
         printLineSeparated();
-        printBeer(paleAleCitra);
+        paleAleCitra.printObject();
         printLineSeparated();
-        printBeer(irishDryStout);
-    }
-
-    public static void printWine(Wine wine) {
-        System.out.println("Name: " + wine.name + "\nPercentage of alcohol: " +
-                wine.percentageOfAlcohol + "\nIs it carbonated? " + wine.carbonated +
-                "\nType of wine: " + wine.typeOfWine + "\nColor of wine: " + wine.color +
-                "\nSort of wine: " + wine.sortOfGrape + "\nYear of production: " + wine.yearOfProduction);
-    }
-
-    public static void printBeer(Beer beer) {
-        System.out.println("Name:" + beer.name + "\nPercentage of alcohol: " + beer.percentageOfAlcohol +
-                "\nIs it carbonated? " + beer.carbonated + "\nType of beer: " + beer.type +
-                "\nColor of beer: " + beer.color);
+        irishDryStout.printObject();
     }
 
     public static void printLineSeparated() {
