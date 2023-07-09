@@ -14,6 +14,25 @@ public class Wine extends Alcohol {
         this.yearOfProduction = yearOfProduction;
     }
 
+
+    @Override
+    public void printObject() {
+        System.out.println(this.toString());
+    }
+
+    @Override
+    public String toString() {
+        return "Wine{" +
+                "Name: " + this.getName() + "\n" +
+                "Percentage of alcohol: " + this.getPercentageOfAlcohol() + "\n" +
+                "Is it carbonated? " + this.isCarbonated() + "\n" +
+                "typeOfWine = " + typeOfWine + "\n" +
+                "color = " + color + "\n" +
+                "sortOfGrape = " + sortOfGrape + "\n" +
+                "yearOfProduction = " + yearOfProduction +
+                '}';
+    }
+
     public void setTypeOfWine(String typeOfWine) {
         this.typeOfWine = typeOfWine;
     }
