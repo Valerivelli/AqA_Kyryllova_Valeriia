@@ -2,15 +2,15 @@ package com.hillel.task1;
 
 public class Beer extends Alcohol {
 
-    private String type;
+    private TypeOfBeer typeOfBeer;
     private String color;
 
-    public void setType(String typeOfBeer) {
-        this.type = typeOfBeer;
+    public void setType(TypeOfBeer typeOfBeer) {
+        this.typeOfBeer = typeOfBeer;
     }
 
-    public String getType() {
-        return type;
+    public TypeOfBeer getType() {
+        return typeOfBeer;
     }
 
     public void setColor(String colorOfbeer) {
@@ -21,9 +21,9 @@ public class Beer extends Alcohol {
         return color;
     }
 
-    public Beer(float percentageOfAlcohol, String name, boolean carbonation, String type, String color) {
+    public Beer(float percentageOfAlcohol, String name, boolean carbonation, TypeOfBeer typeOfBeer, String color) {
         super(percentageOfAlcohol, name, carbonation);
-        this.type = type;
+        this.typeOfBeer = typeOfBeer;
         this.color = color;
     }
 
@@ -38,7 +38,7 @@ public class Beer extends Alcohol {
                 "Name: " + this.getName() + "\n" +
                 "Percentage of alcohol: " + this.getPercentageOfAlcohol() + "\n" +
                 "Is it carbonated? " + this.isCarbonated() + "\n" +
-                "type = " + type + "\n" +
+                "type = " + typeOfBeer + "\n" +
                 "color = " + color + "\n" +
                 '}';
     }
