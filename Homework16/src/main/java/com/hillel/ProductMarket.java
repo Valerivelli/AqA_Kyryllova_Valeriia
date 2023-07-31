@@ -13,7 +13,6 @@ public class ProductMarket {
         return list;
     }
 
-
     public List<String> getAllNameOfProducts(List<Product> list) {
         List<String> result = new ArrayList<>();
 
@@ -22,7 +21,6 @@ public class ProductMarket {
         }
         return result;
     }
-
 
     public List<String> sortAllProductAlphabetically(List<Product> list) {
         List<String> result = new ArrayList<>();
