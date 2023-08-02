@@ -1,5 +1,6 @@
 package com.hillel;
 
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -19,5 +20,12 @@ public class Main {
         System.out.println("Prices higher than 10 : " + productMarket.getPriceHigherThan10(list));
         System.out.println("Prices less than 5: " + productMarket.getPriceLessThan5(list));
         System.out.println("Prices of Products as String: " + productMarket.getPricesAsStringsForProductList(list));
+
+        Collections.sort(list, new ProductComparatorByPrice());
+
+        System.out.print("Sorted products by price: \n");
+        for (Product product : list) {
+            System.out.println(product.getPrice());
+        }
     }
 }
