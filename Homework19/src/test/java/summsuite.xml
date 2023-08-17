@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name = "testing sum for calculation">
+    <test name="test sum">
+            <classes>
+                <class name="com.hillel.CalculationSumTestPositive"/>
+                <class name="com.hillel.CalculationTest"/>
+            </classes>
+    </test>
+</suite>
