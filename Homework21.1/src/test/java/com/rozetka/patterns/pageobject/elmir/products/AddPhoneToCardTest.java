@@ -28,16 +28,14 @@ public class AddPhoneToCardTest {
         cardPageFlow = new CardPageFlow(webDriver);
         webDriver.manage().window().maximize();
         webDriver.get("https://elmir.ua/");
-        Thread.sleep(3000);
     }
 
     @Test
-    public void addProductToCardAndDelete() throws InterruptedException {
+    public void addProductToCardAndDelete() {
         homePageFlow.mobileConnections();
         homePageFlow.phonesList();
         phonesListPageFlow.getPhone();
         phonePageFlow.addToCardButon();
-        Thread.sleep(2000);
         cardPageFlow.buyButton();
         String link = webDriver.getCurrentUrl();
         Assertions.assertTrue(link.contains("basket.html"));

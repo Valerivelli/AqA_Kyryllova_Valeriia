@@ -4,6 +4,7 @@ import com.hillel.pageobject.elmir.adstract.AbstractPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class PhonePage extends AbstractPage {
     public PhonePage(WebDriver webDriver) {
@@ -18,7 +19,7 @@ public class PhonePage extends AbstractPage {
     }
 
     public WebElement addToFavoriteList() {
-        return getWebDriver().findElement(ADD_TO_FAVORITE_LIST);
+        return webDriverWait.until(ExpectedConditions.elementToBeClickable(ADD_TO_FAVORITE_LIST));
     }
 
 

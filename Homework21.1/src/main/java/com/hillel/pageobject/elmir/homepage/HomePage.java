@@ -4,6 +4,7 @@ import com.hillel.pageobject.elmir.adstract.AbstractPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class HomePage extends AbstractPage {
     public HomePage(WebDriver webDriver) {
@@ -17,7 +18,7 @@ public class HomePage extends AbstractPage {
     private static final By SMART_WATCHES_LIST = By.xpath("//*[contains(@class,'cat-name') and contains(text(),'Смарт-часы и фитнес браслеты')]");
 
     public WebElement getMobileConnectionTab() {
-        return getWebDriver().findElement(MOBILE_CONNECTION_TAB);
+        return webDriverWait.until(ExpectedConditions.elementToBeClickable(MOBILE_CONNECTION_TAB));
     }
 
     public WebElement getPhonesList() {
