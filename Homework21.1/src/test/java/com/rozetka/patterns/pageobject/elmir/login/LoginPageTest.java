@@ -12,12 +12,11 @@ public class LoginPageTest {
 
 
     @BeforeAll
-    public static void init() throws InterruptedException {
+    public static void init() {
         webDriver = WebDriverFactory.getByName(BrowserName.CHROME);
         loginFlow = new LoginFlow(webDriver);
         webDriver.manage().window().maximize();
         webDriver.get("https://elmir.ua/");
-        Thread.sleep(3000);
     }
 
     @Test
