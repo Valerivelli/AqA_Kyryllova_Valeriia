@@ -1,4 +1,4 @@
-package com.rozetka.login;
+package com.rozetka.patterns;
 
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
