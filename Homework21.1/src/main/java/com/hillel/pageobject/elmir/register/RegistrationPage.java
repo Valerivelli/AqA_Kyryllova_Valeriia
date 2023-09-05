@@ -4,6 +4,7 @@ import com.hillel.pageobject.elmir.adstract.AbstractPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class RegistrationPage extends AbstractPage {
 
@@ -24,7 +25,7 @@ public class RegistrationPage extends AbstractPage {
     }
 
     public WebElement getAuthoButton() {
-        return getWebDriver().findElement(AUTHO_BUTTON);
+        return webDriverWait.until(ExpectedConditions.elementToBeClickable(AUTHO_BUTTON));
     }
 
     public WebElement getRegisterButton() {
@@ -32,11 +33,11 @@ public class RegistrationPage extends AbstractPage {
     }
 
     public WebElement getSubmitButton() {
-        return getWebDriver().findElement(SUBMIT_BUTTON);
+        return webDriverWait.until(ExpectedConditions.elementToBeClickable(SUBMIT_BUTTON));
     }
 
     public WebElement getNameValidationMessage() {
-        return getWebDriver().findElement(NAME_VALIDATION_MESSAGE);
+        return webDriverWait.until(ExpectedConditions.elementToBeClickable(NAME_VALIDATION_MESSAGE));
     }
 
     public WebElement getSurnameValidationMessage() {

@@ -2,9 +2,7 @@ package com.rozetka.patterns.pageobject.elmir.register;
 
 import com.hillel.pageobject.elmir.factory.BrowserName;
 import com.hillel.pageobject.elmir.factory.WebDriverFactory;
-import com.hillel.pageobject.elmir.flows.login.LoginFlow;
 import com.hillel.pageobject.elmir.flows.register.RegistrationFlow;
-import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -15,22 +13,21 @@ public class RegistrationPageTest {
     private static WebDriver webDriver;
     private static RegistrationFlow registrationFlow;
     @BeforeAll
-    public static void init() throws InterruptedException {
+    public static void init() {
         webDriver = WebDriverFactory.getByName(BrowserName.CHROME);
         registrationFlow = new RegistrationFlow(webDriver);
         webDriver.manage().window().maximize();
         webDriver.get("https://elmir.ua/");
-        Thread.sleep(3000);
     }
 
     @Test
     @DisplayName("Register new user")
-    public void testRegistration() throws InterruptedException {
+    public void testRegistration() {
         registrationFlow.authoButton();
         registrationFlow.registerButton();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         registrationFlow.submitButton();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         registrationFlow.getNameValidationMessage();
         Assertions.assertEquals("Укажите ваше имя.",registrationFlow.getNameValidationMessage());
         registrationFlow.getSurnameValidationMessage();

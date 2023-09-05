@@ -4,6 +4,7 @@ import com.hillel.pageobject.elmir.adstract.AbstractPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CardPage extends AbstractPage {
     public CardPage(WebDriver webDriver) {
@@ -14,7 +15,7 @@ public class CardPage extends AbstractPage {
     private static By DELETE_BUTTON = By.xpath("//a[@hint=\"Удалить этот товар из корзины\"]");
 
     public WebElement getBuyButton() {
-        return getWebDriver().findElement(BUTTON_BUY);
+        return webDriverWait.until(ExpectedConditions.elementToBeClickable(BUTTON_BUY));
     }
 
     public WebElement getDeleteButton() {

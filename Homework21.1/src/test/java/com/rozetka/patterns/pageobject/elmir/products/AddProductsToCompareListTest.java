@@ -19,14 +19,13 @@ public class AddProductsToCompareListTest {
     private static SmartWatchesPageFlow smartWatchesPageFlow;
 
     @BeforeAll
-    public static void init() throws InterruptedException {
+    public static void init() {
         webDriver = WebDriverFactory.getByName(BrowserName.CHROME);
         homePageFlow = new HomePageFlow(webDriver);
         smartWatchesListPageFlow = new SmartWatchesListPageFlow(webDriver);
         smartWatchesPageFlow = new SmartWatchesPageFlow(webDriver);
         webDriver.manage().window().maximize();
         webDriver.get("https://elmir.ua/");
-        Thread.sleep(3000);
     }
 
     @Test

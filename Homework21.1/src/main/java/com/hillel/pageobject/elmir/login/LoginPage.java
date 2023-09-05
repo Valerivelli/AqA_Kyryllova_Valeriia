@@ -4,6 +4,7 @@ import com.hillel.pageobject.elmir.adstract.AbstractPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends AbstractPage {  //хранит локаторы для элеметов и геттеры для элементов
     private static final By LOGIN_FIELD = By.xpath("//input[@name=\"login\"]");
@@ -30,7 +31,7 @@ public class LoginPage extends AbstractPage {  //хранит локаторы �
     }
 
     public WebElement getAuthoButton() {
-        return getWebDriver().findElement(AUTHO_BUTTON);
+        return webDriverWait.until(ExpectedConditions.elementToBeClickable(AUTHO_BUTTON));
     }
 
     public WebElement getPasswordValidationMessage() {

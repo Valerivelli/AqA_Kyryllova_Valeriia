@@ -24,15 +24,13 @@ public class AddProductToFavoriteListTest {
         phonePageFlow = new PhonePageFlow(webDriver);
         webDriver.manage().window().maximize();
         webDriver.get("https://elmir.ua/");
-        Thread.sleep(3000);
     }
 
     @Test
-    public void addProductToFavoriteList() throws InterruptedException {
+    public void addProductToFavoriteList() {
         homePageFlow.mobileConnections();
         homePageFlow.phonesList();
         phonesListPageFlow.getPhone();
-        Thread.sleep(2000);
         phonePageFlow.addToFavoriteList();
     }
 

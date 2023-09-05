@@ -1,6 +1,5 @@
 package com.hillel.pageobject.elmir.flows.products;
 
-import com.hillel.pageobject.elmir.products.PhoneListPage;
 import com.hillel.pageobject.elmir.products.PhonePage;
 import org.openqa.selenium.WebDriver;
 
